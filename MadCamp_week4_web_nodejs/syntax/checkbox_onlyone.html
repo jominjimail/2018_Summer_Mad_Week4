@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>체크박스 하나만 선택하기</title>
+<script type="text/javascript">
+<!--
+    function check_only(chk){
+        var obj = document.getElementsByName("chkbox");
+        for(var i=0; i<obj.length; i++){
+            if(obj[i] != chk){
+                obj[i].checked = false;
+            }
+        }
+    }
+//-->
+</script>
+</head>
+
+<body>
+<FORM name=chkForm action="" method=post >
+    <input type="checkbox" name="chkbox" value="chk1"
+                                                 onclick="check_only(this)">CheckBox1
+    <input type="checkbox" name="chkbox" value="chk2"
+                                                 onclick="check_only(this)">CheckBox2
+    <input type="checkbox" name="chkbox" value="chk3"
+                                                 onclick="check_only(this)">CheckBox3
+</FORM>
+</body>
+</html>
