@@ -15,7 +15,7 @@ var app = http.createServer(function(request , response){
       var html = `<!doctype html>
       <html>
       <head>
-      <title>OpenMajor Welcome</title>
+      <title>OpenMajor Welcome!</title>
       <meta charset="utf-8">
       </head>
       <body>
@@ -48,7 +48,7 @@ var app = http.createServer(function(request , response){
         </p>
         <p>
         <label for="psw"><b>Password</b></label>
-        <input typd="password" name="pwd" placeholder="Enter Password"  required="required">
+        <input typd="password" name="pwd" placeholder="Enter Password" required="required">
         </p>
         <p>
         <button type="submit">Login</button>
@@ -69,12 +69,29 @@ var app = http.createServer(function(request , response){
 
     request.on('end' , function(){
       var post = qs.parse(body);
-
+      var logincheck =0; // 이변수로 로그인 성공 여부 체크 : 성공이면 1 , 실패면 0 , 기본값 0
       var id = post.id;
-      var pwd  = post.pwd; // <input name 으로 찾기
+      var pwd  = post.pwd;
 
       console.log(id , pwd);
       //DB 연결해서 확인하기 정책을 해야함
+      //기수 오빠가 여기에다가 DB table 디져서 맞으면
+      // logincheck=1; 이런식으로 파라미터 넘겨주면 될거 같아
+
+      if(logincheck===1){ // 로그인 성공
+        /*
+        로그인을 성공했으면 해당 DB table 에 있는 음 학교 정보라든가
+        이름, 학생인지 교사인지 이메일 등등 이런 기본 정보를 한꺼번에 불러와서
+        모듈? 객체가 더 와닿으려나 암튼 그 태호가 준 파일
+        project2 / server / models / user.js 이 부분 참고해서 처리하면 좋을거 같앙
+        models / user.js 파일은 미리 추가했어!!
+        */
+        response.writeHead(302, {Location: `/`}); // 일단 성공하면 메인으로 이동 나중에는 사용자 이름이랑 학교 정보 받아와서 메인 상단에 노출시킬예정
+        response.end('access sucess');
+      }else if(logincheck===0){ // 로그인 실패
+        response.writeHead(302, {Location: `/login`}); // 일단 다시 로그인 창으로 이동 나중에는 다시 로그인 해주라는 경고창을 추가할 예정
+        response.end('access sucess login fail');
+      }
 
     });
   }else if(pathname === '/register'){
@@ -108,7 +125,6 @@ var app = http.createServer(function(request , response){
 
     </body>
     </html>`;
-
     response.writeHead(200);
     response.end(html);
   }else if(pathname === '/register_process'){
