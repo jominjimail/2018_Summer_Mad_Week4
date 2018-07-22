@@ -48,7 +48,7 @@ var app = http.createServer(function(request , response){
         </p>
         <p>
         <label for="psw"><b>Password</b></label>
-        <input typd="password" placeholder="Enter Password" name="pwd" required="required">
+        <input typd="password" name="pwd" placeholder="Enter Password"  required="required">
         </p>
         <p>
         <button type="submit">Login</button>
@@ -71,7 +71,7 @@ var app = http.createServer(function(request , response){
       var post = qs.parse(body);
 
       var id = post.id;
-      var pwd  = post.pwd;
+      var pwd  = post.pwd; // <input name 으로 찾기
 
       console.log(id , pwd);
       //DB 연결해서 확인하기 정책을 해야함
@@ -83,45 +83,48 @@ var app = http.createServer(function(request , response){
     <head>
     <title>OpenMajor Register</title>
     <meta charset="utf-8">
-
-    <script type="text/javascript">
-    <!--
-    function check_only(chk){
-        var obj = document.getElementsByName("chkbox");
-        for(var i=0; i<obj.length; i++){
-            if(obj[i] != chk){
-                obj[i].checked = false;
-            }
-        }
-    }
-    //-->
-    </script>
-
     </head>
     <body>
 
-    <form  action="/register_process" method="post">
+        <form  action="/register_process" method="post">
         <p>
-        <label for="id"><b>교수</b></label>
-        <input name="aaa" type="checkbox" value="1" onclick="check_only(this)"><br />
+        <label for="r1_1">
+        <input type="radio" id="r1_1" name="r1" value="1">교수<br /></label>
         </p>
         <p>
-        <label for="id"><b>대학생</b></label>
-        <input name="aaa" type="checkbox" value="2" onclick="check_only(this)"><br />
+        <label for="r1_2">
+        <input type="radio" id="r1_2" name="r1" value="2">대학생<br /></label>
         </p>
         <p>
-        <label for="id"><b>일반</b></label>
-        <input name="aaa" type="checkbox" value="3" onclick="check_only(this)"><br />
+        <label for="r1_3">
+        <input type="radio" id="r1_3" name="r1" value="3">일반<br /></label>
         </p>
         <p>
-        <button type="submit">Next</button>
+        <input type="submit">
         </p>
-    </form>
+        </form>
+        <pre id="log">
+        </pre>
 
     </body>
     </html>`;
+
     response.writeHead(200);
     response.end(html);
+  }else if(pathname === '/register_process'){
+    var body = '';
+    request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
+            body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
+    });
+
+    request.on('end', function (){
+      var post = qs.parse(body);
+      console.log(post.r1);
+
+      response.writeHead(200);
+      response.end("checked");
+    });
+
   }
   else{
       response.writeHead(404);

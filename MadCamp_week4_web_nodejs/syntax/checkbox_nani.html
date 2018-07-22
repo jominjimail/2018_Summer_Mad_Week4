@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>OpenMajor Register</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+function test_sample(){
+var radios = document.getElementsByName("r1");
+
+for (var i = 0, length = radios.length; i < length; i++)
+{
+ if (radios[i].checked)
+ {
+  // do whatever you want with the checked radio
+  //alert(radios[i].value);
+  var checkresult=radios[i].value;
+  console.log(var);
+  // only one radio can be logically checked, don't check the rest
+  break;
+ }
+}
+}
+</script>
+
+</head>
+<body>
+
+    <form  action="" method="post">
+    <p>
+    <label for="r1_1">
+    <input type="radio" id="r1_1" name="r1" value="1">교수<br /></label>
+    </p>
+    <p>
+    <label for="r1_2">
+    <input type="radio" id="r1_2" name="r1" value="2">대학생<br /></label>
+    </p>
+    <p>
+    <label for="r1_3">
+    <input type="radio" id="r1_3" name="r1" value="3">일반<br /></label>
+    </p>
+    <p>
+    <button type="submit" onclick="test_sample();">Next</button>
+    </p>
+    </form>
+
+</body>
+</html>
