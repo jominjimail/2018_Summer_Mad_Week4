@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Openmajor Signup</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="/signup_process" method="post">
+		<p>
+			<label>
+				<b>이름</b>
+				<input type="text" name="NAME" placeholder="NAME", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>아이디</b>
+				<input type="text" name="ID" placeholder="ID", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>패스워드</b>
+				<input type="password" name="PWD" placeholder="PASSWORD", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>이메일</b>
+				<input type="text" name="EMAIL" placeholder="EMAIL", required="required">
+			</label>
+		</p>
+		<p>
+			<button type="submit">회원가입</button>
+			<!-- input(type='button', onclick='javascript:history.back()', value='cancel') -->
+			<input type='button', onclick="location.href='/'" value="메인으로">
+						<!-- <input type="button" onclick="location.href='/signup'" value="회원가입"> -->
+		</p>
+	</form>
+</body>
+</html>
