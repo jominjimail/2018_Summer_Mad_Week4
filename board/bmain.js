@@ -8,9 +8,8 @@ var db = require('./lib/db');
 var path = require('path');
 var templateView =require('./lib/template.js');
 
-
-app.get('/', function(request, response) {
-  var html = `<!doctype html>
+function mainhtml(mainlist){
+  return `<!doctype html>
   <html>
   <head>
   <title>OpenMajor Welcome!</title>
@@ -19,29 +18,55 @@ app.get('/', function(request, response) {
   <body>
 
   <h1><a href="/">Open Major</a></h1>
-  <h1><a href="/CSE">CSE</a></h1>
-  <h1><a href="/ELEC">ELEC</a></h1>
+  ${mainlist}
 
   </body>
   </html>`;
-  response.send(html);
-});
+}
 
-app.get('/CSE', function(request, response){
-  var html = `<!doctype html>
+function mainlist(result){
+  var mainlist=''
+  var i = 0;
+  while(i < result.length){
+    mainlist += `
+    <h1><a href="/${result[i].nickname}">${result[i].fullname}</a></h1>
+    `;
+    i = i + 1;
+  }
+  return mainlist;
+}
+
+function mainMajor(Major){
+  return `<!doctype html>
   <html>
   <head>
-  <title>OpenMajor CSE</title>
+  <title>OpenMajor ${Major}</title>
   <meta charset="utf-8">
   </head>
   <body>
 
-  <h1><a href="/CSE/issue">main issue</a></h1>
-  <h1><a href="/CSE/professor">CES Professor</a></h1>
-  <h1><a href="/CSE/board">board</a></h1>
+  <h1><a href="/${Major}/issue">${Major} main issue</a></h1>
+  <h1><a href="/${Major}/professor">${Major} Professor</a></h1>
+  <h1><a href="/${Major}/board">${Major} board</a></h1>
 
   </body>
   </html>`;
+}
+
+app.get('/', function(request, response) {
+  var tablename = 'major_list'
+  db.query(`SELECT * FROM ${tablename}` , function(error , result){
+    if(error){
+      throw error;
+    }
+    var html = mainhtml(mainlist(result));
+    response.send(html);
+  })
+});
+
+app.get('/:Major', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var html = mainMajor(Major);
   response.send(html);
 
 });
@@ -53,10 +78,12 @@ app.get('/CSE', function(request, response){
 
 */
 
-app.get('/CSE/issue', function(request, response){
-  var tablename='cse_issue'
-  var path_herf='/CSE/issue'
+app.get('/:Major/:Major_board', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
 
+  var tablename=`${Major}_${Major_board}`
+  var path_herf=`/${Major}/${Major_board}`
   db.query(`SELECT * FROM ${tablename}` , function(error , result){
     if(error){
       throw error;
@@ -67,23 +94,26 @@ app.get('/CSE/issue', function(request, response){
   })
 });
 
-app.get('/CSE/issue/write', function(request, response){
-  var path_herf='/CSE/issue/write'
+app.get('/:Major/:Major_board/write', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var path_herf=`/${Major}/${Major_board}/write`
   //여기 접근할때 아마 user 의 major 정보를 확인하고 접근권한같은거 추가할듯
   var html =templateView.writeform(path_herf);
   response.send(html);
 });
 
-app.post('/CSE/issue/write_process', function(request, response){
-  var tablename='cse_issue'
-  var redirect='/CSE/issue'
+app.post('/:Major/:Major_board/write_process', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var tablename=`${Major}_${Major_board}`
+  var redirect=`/${Major}/${Major_board}`
   var body = '';
   request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
           body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
   });
   request.on('end', function (){
     var post = qs.parse(body);
-    console.log(post);
     var check = templateView.formCheck(post);
 
     if(check != false){
@@ -104,9 +134,11 @@ app.post('/CSE/issue/write_process', function(request, response){
   });
 });
 
-app.get('/CSE/issue/view/:viewId', function(request, response){
-  var tablename='cse_issue'
-  var path_herf='/CSE/issue'
+app.get('/:Major/:Major_board/view/:viewId', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var tablename=`${Major}_${Major_board}`
+  var path_herf=`/${Major}/${Major_board}`
   var filteredId = path.parse(request.params.viewId).base;
 
     //console.log(filteredId);
@@ -131,9 +163,11 @@ app.get('/CSE/issue/view/:viewId', function(request, response){
   //inner else
 });
 
-app.get('/CSE/issue/update/:updateId', function(request, response){
-  var tablename='cse_issue'
-  var path_herf='/CSE/issue'
+app.get('/:Major/:Major_board/update/:updateId', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var tablename=`${Major}_${Major_board}`
+  var path_herf=`/${Major}/${Major_board}`
   var filteredId = path.parse(request.params.updateId).base;
   if(filteredId === undefined){
     response.writeHead(200);
@@ -159,9 +193,11 @@ app.get('/CSE/issue/update/:updateId', function(request, response){
   }//innerelse
 });
 
-app.post('/CSE/issue/update_process', function(request, response){
-  var tablename='cse_issue'
-  var path_herf='/CSE/issue'
+app.post('/:Major/:Major_board/update_process', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var tablename=`${Major}_${Major_board}`
+  var path_herf=`/${Major}/${Major_board}`
   var body = '';
   request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
           body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
@@ -195,9 +231,11 @@ app.post('/CSE/issue/update_process', function(request, response){
   });
 });
 
-app.post('/CSE/issue/delete', function(request, response){
-  var tablename='cse_issue'
-  var path_herf='/CSE/issue'
+app.post('/:Major/:Major_board/delete', function(request, response){
+  var Major = path.parse(request.params.Major).base;
+  var Major_board = path.parse(request.params.Major_board).base;
+  var tablename=`${Major}_${Major_board}`
+  var path_herf=`/${Major}/${Major_board}`
   var body = '';
   request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
           body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
