@@ -33,7 +33,7 @@ module.exports={
       list = list + `
       <tr>
       <th>${result[i].id}</th>
-      <th><a href="${path_herf}/view?index=${result[i].id}">${result[i].title}</a></th>
+      <th><a href="${path_herf}/view/${result[i].id}">${result[i].title}</a></th>
       <th>${result[i].author_id}</th>
       <th>${result[i].created}</th>
       <th>${result[i].views}</th>
@@ -116,7 +116,7 @@ module.exports={
         </tr>
 
       </table>
-      <a href="${path_herf}/update?index=${id}">update</a>
+      <a href="${path_herf}/update/${id}">update</a>
 
       <form action="${path_herf}/delete" method="post">
           <input type="hidden" name="id" value="${id}">
