@@ -4,7 +4,7 @@ var db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '025987',
-  database : 'madcamp'
+  database : 'openmajor'
 });
 
 db.connect();

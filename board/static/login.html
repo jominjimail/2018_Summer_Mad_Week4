@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Openmajor Login</title>
+</head>
+<body>
+	<form action="/login_process" method="post">
+		<p>
+			<label>
+				<b>아이디</b>
+				<input type="text" name="ID" placeholder="ID", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>패스워드</b>
+				<input type="password" name="PWD" placeholder="PASSWORD", required="required">
+			</label>
+		</p>
+		<p>
+			<button type="submit">로그인</button>
+			<input type="button" onclick="location.href='/signup'" value="회원가입">
+		</p>
+	</form>
+</body>
+</html>
