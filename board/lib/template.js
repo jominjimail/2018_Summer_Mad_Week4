@@ -34,7 +34,7 @@ module.exports={
       <tr>
       <th>${result[i].id}</th>
       <th><a href="/home${path_herf}/view/${result[i].id}">${result[i].title}</a></th>
-      <th>${result[i].author_id}</th>
+      <th>${result[i].name}</th>
       <th>${result[i].created}</th>
       <th>${result[i].views}</th>
       </tr>`;
@@ -53,7 +53,6 @@ module.exports={
 
       <form action="/home${path_herf}_process" method="post" >
         제목:<input type="text" name="title"/><br/>
-        작성자:<input type="text" name="writer"/><br/>
         내용:<textarea name="description" placeholder="description"></textarea>
         <input type="submit"/>
       </form>
@@ -69,11 +68,6 @@ module.exports={
       //alert('제목을 입력하세요');           // 경고창을 띄우고
       //title.focus();    // 해당태그에 포커스를 준뒤
       return false;                       // false를 리턴합니다.
-    }
-    if (post.writer == null ||  post.writer  == ""){
-      //alert('작성자를 입력하세요');
-      //writer.focus();
-      return false;
     }
 
     if (post.description == null ||  post.description == ""){
@@ -128,7 +122,7 @@ module.exports={
     </body>
     </html>`;
   },
-  updateview:function(id , author_id , title , description , path_herf){
+  updateview:function(id , title , description , path_herf){
     return `<!doctype html>
     <html>
     <head>
@@ -140,7 +134,6 @@ module.exports={
       <form action="/home${path_herf}/update_process" method="post" >
       <input type="hidden" name="id" value="${id}">
         제목:<input type="text" name="title" value=${title}><br/>
-        작성자:<input type="text" name="writer" value=${author_id}><br/>
         내용:<textarea name="description" >${description}</textarea>
         <input type="submit"/>
       </form>

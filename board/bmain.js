@@ -29,6 +29,17 @@ var session=require('express-session');
 var MySQLStore=require('express-mysql-session')(session);
 var sessionStore=new MySQLStore(options);
 
+
+var curruser={
+	'id': 36,
+	'name': '텀블러',
+	'userid': 'sid',
+	'email':'jominjimail@gmail.com',
+	'school':'한양대학교',
+	'major':'cse',
+	'level':1
+}
+
 app.set('views', __dirname + '/static');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -45,6 +56,7 @@ app.use(session({
 
 ///////////////////////////////////////////////////////////////
 app.get('/',function(req,res){ // 로그인 화면
+	console.log(curruser.id);
 	res.render('login.html');
 });
 
@@ -235,7 +247,6 @@ app.post('/login_process', function(req, res){
 				});
 			}
 		});
-
 });
 ///////////////////////////////////////////////////////////////
 
@@ -253,7 +264,7 @@ app.post('/login_process', function(req, res){
 ///////////////////////////////////////////////////////////////
 app.get('/home', function(request, response) {
   //회원인지 아닌지 확인해주는 함수
-  console.log(request.session.authId);
+  console.log(curruser);
 
   var tablename = 'major_list'
   db.query(`SELECT * FROM ${tablename}` , function(error , result){
@@ -280,21 +291,24 @@ app.get('/CSE', function(request, response){
 */
 
 app.get('/home/:Major/:Major_board', function(request, response){
-  console.log(request.session.authId);
-
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
 
   var tablename=`${Major}_${Major_board}`
   var path_herf=`/${Major}/${Major_board}`
-  db.query(`SELECT * FROM ${tablename}` , function(error , result){
-    if(error){
-      throw error;
-    }
-    var list = templateView.list(result , path_herf);
-    var html = templateView.frame(list , path_herf);
-    response.send(html);
-  })
+
+		db.query(`SELECT bb.id, bb.title, bb.description, bb.created, bb.author_id, bb.views , uu.name
+			FROM practice AS uu
+			RIGHT JOIN ${tablename} AS bb
+			ON bb.author_id = uu.id` , function(error, joinresult){
+				if(error){
+      	throw error;
+    	}
+			var list = templateView.list(joinresult , path_herf);
+	    var html = templateView.frame(list , path_herf);
+	    response.send(html);
+		})
+
 });
 
 app.get('/home/:Major/:Major_board/write', function(request, response){
@@ -321,7 +335,7 @@ app.post('/home/:Major/:Major_board/write_process', function(request, response){
 
 	if(check != false){
       db.query(`INSERT INTO ${tablename} (title , description , created , author_id , views) VALUES (? , ? , NOW() , ? , ?)`,
-      [body1.title , body1.description ,1, 1],
+      [body1.title , body1.description ,curruser.id, 1],
       function(error1 , result){
         if(error1){
           throw error1;
@@ -342,27 +356,20 @@ app.get('/home/:Major/:Major_board/view/:viewId', function(request, response){
   var tablename=`${Major}_${Major_board}`
   var path_herf=`/${Major}/${Major_board}`
   var filteredId = path.parse(request.params.viewId).base;
-  console.log(path_herf);
 
-    //console.log(filteredId);
-    db.query(`SELECT * FROM ${tablename}` , function(error , result){
-        if(error){
-          throw error;
-        }
-        db.query(`SELECT * FROM ${tablename} WHERE id=?`,[filteredId] , function(error2 , result){
-          if(error2){
-            throw error2;
-          }
-          var id=result[0].id;
-          var title = result[0].title;
-          var description = result[0].description;
-          var author_id=result[0].author_id;
-          var date=result[0].created;
-          var html =templateView.detailview(id , author_id , date , title , description , path_herf);
-          response.send(html);
-        })
-  })//query
-  //inner else
+
+	db.query(`SELECT bb.id, bb.title, bb.description, bb.created, bb.author_id, bb.views , uu.name
+	  FROM practice AS uu
+	  RIGHT JOIN ${tablename} AS bb
+	  ON bb.author_id = uu.id
+	  WHERE bb.id=?`,[filteredId] , function(error2 , joinresult){
+	  if(error2){
+	    throw error2;
+	  }
+    var html =templateView.detailview(joinresult[0].id , joinresult[0].name , joinresult[0].created , joinresult[0].title , joinresult[0].description , path_herf);
+    response.send(html);
+    })
+
 });
 
 app.get('/home/:Major/:Major_board/update/:updateId', function(request, response){
@@ -386,9 +393,8 @@ app.get('/home/:Major/:Major_board/update/:updateId', function(request, response
           var id=result[0].id;
           var title = result[0].title;
           var description = result[0].description;
-          var author_id=result[0].author_id;
           var date=result[0].created;
-          var html = templateView.updateview(id , author_id , title , description , path_herf);
+          var html = templateView.updateview(id , title , description , path_herf);
           response.send(html);
         })
       })//query
@@ -397,14 +403,12 @@ app.get('/home/:Major/:Major_board/update/:updateId', function(request, response
 
 app.post('/home/:Major/:Major_board/update_process', function(request, response){
 	var body1=request.body;
-	console.log(body1);
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
   var path_herf=`/${Major}/${Major_board}`
 
   var check = templateView.formCheck(body1);
-  console.log('db 쿼리 완료?');
 
     if(check != false){
       db.query(`UPDATE ${tablename} set title=? , description=?, created=NOW() where id=?` ,

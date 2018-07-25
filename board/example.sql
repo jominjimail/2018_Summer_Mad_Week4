@@ -1,6 +1,28 @@
 --
 -- Table structure for table `author`
 --
+<tr>
+<th>${result[i].id}</th>
+<th><a href="/home${path_herf}/view/${result[i].id}">${result[i].title}</a></th>
+<th>${result[i].author_id}</th>
+<th>${result[i].created}</th>
+<th>${result[i].views}</th>
+
+SELECT bb.id, bb.title, bb.description, bb.created, bb.author_id, bb.views , uu.name
+FROM practice AS uu
+RIGHT JOIN che_issue AS bb
+ON bb.author_id = uu.id
+WHERE bb.id=11;
+
+db.query(`SELECT bb.id, bb.title, bb.description, bb.created, bb.author_id, bb.views , uu.name
+  FROM practice AS uu
+  RIGHT JOIN ${tablename} AS bb
+  ON bb.author_id = uu.id
+  WHERE bb.id=?`,[filteredId] , function(error2 , result){
+  if(error2){
+    throw error2;
+  }
+
 
 
 CREATE TABLE `Major_list` (
