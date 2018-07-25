@@ -312,20 +312,24 @@ app.get('/home/:Major/:Major_board', function(request, response){
 });
 
 app.get('/home/:Major/:Major_board/write', function(request, response){
+
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var path_herf=`/${Major}/${Major_board}/write`
-  //여기 접근할때 아마 user 의 major 정보를 확인하고 접근권한같은거 추가할듯
-  var html =templateView.writeform(path_herf);
-  response.send(html);
+
+	if(curruser.major === Major){
+		var html =templateView.writeform(path_herf);
+	  response.send(html);
+	}else{
+		var html=templateView.majordeny(Major, Major_board);
+		response.send(html);
+	}
+
 });
 
 app.post('/home/:Major/:Major_board/write_process', function(request, response){
 	backURL=request.header('Referer') || '/';
 	var body1=request.body;
-
-	console.log('ffff?몸',body1);
-	console.log('post 파싱 ',body1.title , body1.writer , body1.description);
 
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
@@ -378,6 +382,7 @@ app.get('/home/:Major/:Major_board/update/:updateId', function(request, response
   var tablename=`${Major}_${Major_board}`
   var path_herf=`/${Major}/${Major_board}`
   var filteredId = path.parse(request.params.updateId).base;
+	//update 할 게시글의 작성자와 지금 curruser의 이름이 같은지 체크 하기
   if(filteredId === undefined){
     response.writeHead(200);
     response.end();
@@ -390,12 +395,17 @@ app.get('/home/:Major/:Major_board/update/:updateId', function(request, response
           if(error2){
             throw error2;
           }
-          var id=result[0].id;
-          var title = result[0].title;
-          var description = result[0].description;
-          var date=result[0].created;
-          var html = templateView.updateview(id , title , description , path_herf);
-          response.send(html);
+					if(result[0].author_id === curruser.id){
+					   var id=result[0].id;
+					   var title = result[0].title;
+					   var description = result[0].description;
+					   var date=result[0].created;
+					   var html = templateView.updateview(id , title , description , path_herf);
+					   response.send(html);
+					}else{
+						var html=templateView.updatedeny(Major , Major_board , filteredId);
+						response.send(html);
+					}
         })
       })//query
   }//innerelse
@@ -440,13 +450,26 @@ app.post('/home/:Major/:Major_board/delete', function(request, response){
 
   var filteredId = body1.id;
     //user 가 이 게시글을 삭제할 권리가 있는지 체크가 필요하다.
-  db.query(`DELETE FROM ${tablename} WHERE id=${filteredId}` , function(error , result){
-      if(error){
-        throw error;
-      }
-      response.writeHead(302, {Location: `/home${path_herf}`});
-      response.end();
-  })//query
+	db.query(`SELECT * FROM ${tablename} WHERE id=?`,[filteredId] , function(error2 , result){
+		if(error2){
+			throw error2;
+		}
+		if(result[0].author_id === curruser.id){
+			db.query(`DELETE FROM ${tablename} WHERE id=${filteredId}` , function(error , result){
+		      if(error){
+		        throw error;
+		      }
+		      response.writeHead(302, {Location: `/home${path_herf}`});
+		      response.end();
+		  })//query
+		}else{
+			var html=templateView.deletedeny(Major , Major_board , filteredId);
+			response.send(html);
+		}
+	})
+
+
+
 
 });
 

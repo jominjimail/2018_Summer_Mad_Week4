@@ -141,5 +141,50 @@ module.exports={
     </body>
     </html>
     `;
+  },
+  majordeny:function(Major , Major_board ){
+    return `<!DOCTYPE html>
+			<html>
+			<head>
+      <meta charset="utf-8" />
+      <title>Openmajor</title>
+      <script type="text/Javascript">
+            alert('전공이 맞지 않습니다. 기수하고 싶은대로 해!');
+            window.location.href="/home/${Major}/${Major_board}";
+      </script>
+			</head>
+			<body>
+			</body>
+			</html>`;
+  },
+  updatedeny:function(Major , Major_board, updateId){
+    return `<!DOCTYPE html>
+			<html>
+			<head>
+      <meta charset="utf-8" />
+      <title>Openmajor</title>
+      <script type="text/Javascript">
+            alert('업데이트 권한이 없습니다. 기수하고 싶은대로 해!');
+            window.location.href="/home/${Major}/${Major_board}/view/${updateId}";
+      </script>
+			</head>
+			<body>
+			</body>
+			</html>`;
+  },
+  deletedeny:function(Major , Major_board, deleteId){
+    return `<!DOCTYPE html>
+			<html>
+			<head>
+      <meta charset="utf-8" />
+      <title>Openmajor</title>
+      <script type="text/Javascript">
+            alert('삭제 권한이 없습니다. 기수하고 싶은대로 해!');
+            window.location.href="/home/${Major}/${Major_board}/view/${deleteId}";
+      </script>
+			</head>
+			<body>
+			</body>
+			</html>`;
   }
 }
