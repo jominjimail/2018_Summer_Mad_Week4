@@ -21,7 +21,7 @@ module.exports={
         ${_list}
 
       </table>
-      <a href = "${path_herf}/write">글쓰기</a>
+      <a href = "/home${path_herf}/write">글쓰기</a>
 
     </body>
     </html>`;
@@ -33,7 +33,7 @@ module.exports={
       list = list + `
       <tr>
       <th>${result[i].id}</th>
-      <th><a href="${path_herf}/view/${result[i].id}">${result[i].title}</a></th>
+      <th><a href="/home${path_herf}/view/${result[i].id}">${result[i].title}</a></th>
       <th>${result[i].author_id}</th>
       <th>${result[i].created}</th>
       <th>${result[i].views}</th>
@@ -51,7 +51,7 @@ module.exports={
     </head>
     <body>
 
-      <form action="${path_herf}_process" method="post" >
+      <form action="/home${path_herf}_process" method="post" >
         제목:<input type="text" name="title"/><br/>
         작성자:<input type="text" name="writer"/><br/>
         내용:<textarea name="description" placeholder="description"></textarea>
@@ -116,14 +116,14 @@ module.exports={
         </tr>
 
       </table>
-      <a href="${path_herf}/update/${id}">update</a>
+      <a href="/home${path_herf}/update/${id}">update</a>
 
-      <form action="${path_herf}/delete" method="post">
+      <form action="/home${path_herf}/delete" method="post">
           <input type="hidden" name="id" value="${id}">
           <input type="submit" value="delete">
       </form>
 
-      <a href = "${path_herf}">목록</a>
+      <a href = "/home${path_herf}">목록</a>
 
     </body>
     </html>`;
@@ -137,7 +137,7 @@ module.exports={
     </head>
     <body>
 
-      <form action="${path_herf}/update_process" method="post" >
+      <form action="/home${path_herf}/update_process" method="post" >
       <input type="hidden" name="id" value="${id}">
         제목:<input type="text" name="title" value=${title}><br/>
         작성자:<input type="text" name="writer" value=${author_id}><br/>

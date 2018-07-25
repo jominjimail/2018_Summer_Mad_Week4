@@ -29,7 +29,7 @@ function mainlist(result){
   var i = 0;
   while(i < result.length){
     mainlist += `
-    <h1><a href="/${result[i].nickname}">${result[i].fullname}</a></h1>
+    <h1><a href="/home/${result[i].nickname}">${result[i].fullname}</a></h1>
     `;
     i = i + 1;
   }
@@ -45,15 +45,15 @@ function mainMajor(Major){
   </head>
   <body>
 
-  <h1><a href="/${Major}/issue">${Major} main issue</a></h1>
-  <h1><a href="/${Major}/professor">${Major} Professor</a></h1>
-  <h1><a href="/${Major}/board">${Major} board</a></h1>
+  <h1><a href="/home/${Major}/issue">${Major} main issue</a></h1>
+  <h1><a href="/home/${Major}/professor">${Major} Professor</a></h1>
+  <h1><a href="/home/${Major}/board">${Major} board</a></h1>
 
   </body>
   </html>`;
 }
 
-app.get('/', function(request, response) {
+app.get('/home', function(request, response) {
   var tablename = 'major_list'
   db.query(`SELECT * FROM ${tablename}` , function(error , result){
     if(error){
@@ -64,7 +64,7 @@ app.get('/', function(request, response) {
   })
 });
 
-app.get('/:Major', function(request, response){
+app.get('/home/:Major', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var html = mainMajor(Major);
   response.send(html);
@@ -78,7 +78,7 @@ app.get('/CSE', function(request, response){
 
 */
 
-app.get('/:Major/:Major_board', function(request, response){
+app.get('/home/:Major/:Major_board', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
 
@@ -94,7 +94,7 @@ app.get('/:Major/:Major_board', function(request, response){
   })
 });
 
-app.get('/:Major/:Major_board/write', function(request, response){
+app.get('/home/:Major/:Major_board/write', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var path_herf=`/${Major}/${Major_board}/write`
@@ -103,11 +103,11 @@ app.get('/:Major/:Major_board/write', function(request, response){
   response.send(html);
 });
 
-app.post('/:Major/:Major_board/write_process', function(request, response){
+app.post('/home/:Major/:Major_board/write_process', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
-  var redirect=`/${Major}/${Major_board}`
+  var redirect=`/home/${Major}/${Major_board}`
   var body = '';
   request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
           body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
@@ -134,12 +134,13 @@ app.post('/:Major/:Major_board/write_process', function(request, response){
   });
 });
 
-app.get('/:Major/:Major_board/view/:viewId', function(request, response){
+app.get('/home/:Major/:Major_board/view/:viewId', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
   var path_herf=`/${Major}/${Major_board}`
   var filteredId = path.parse(request.params.viewId).base;
+  console.log(path_herf);
 
     //console.log(filteredId);
     db.query(`SELECT * FROM ${tablename}` , function(error , result){
@@ -156,14 +157,13 @@ app.get('/:Major/:Major_board/view/:viewId', function(request, response){
           var author_id=result[0].author_id;
           var date=result[0].created;
           var html =templateView.detailview(id , author_id , date , title , description , path_herf);
-          response.writeHead(200);
-          response.end(html);
+          response.send(html);
         })
   })//query
   //inner else
 });
 
-app.get('/:Major/:Major_board/update/:updateId', function(request, response){
+app.get('/home/:Major/:Major_board/update/:updateId', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
@@ -193,7 +193,7 @@ app.get('/:Major/:Major_board/update/:updateId', function(request, response){
   }//innerelse
 });
 
-app.post('/:Major/:Major_board/update_process', function(request, response){
+app.post('/home/:Major/:Major_board/update_process', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
@@ -218,7 +218,7 @@ app.post('/:Major/:Major_board/update_process', function(request, response){
         if(error2){
           throw error2;
         }
-        response.writeHead(302, {Location: `${path_herf}/view/${post.id}`});
+        response.writeHead(302, {Location: `/home${path_herf}/view/${post.id}`});
         response.end();
       }
     )//query
@@ -231,7 +231,7 @@ app.post('/:Major/:Major_board/update_process', function(request, response){
   });
 });
 
-app.post('/:Major/:Major_board/delete', function(request, response){
+app.post('/home/:Major/:Major_board/delete', function(request, response){
   var Major = path.parse(request.params.Major).base;
   var Major_board = path.parse(request.params.Major_board).base;
   var tablename=`${Major}_${Major_board}`
@@ -249,7 +249,7 @@ app.post('/:Major/:Major_board/delete', function(request, response){
         if(error){
           throw error;
         }
-        response.writeHead(302, {Location: `${path_herf}`});
+        response.writeHead(302, {Location: `/home${path_herf}`});
         response.end();
       })//query
   });
