@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'mysql', '--save' ]
+2 info using npm@5.6.0
+3 info using node@v8.11.3
+4 verbose npm-session 6809cdd696af0928
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/mysql 84ms
+8 silly pacote tag manifest for mysql@latest fetched in 113ms
+9 silly install loadIdealTree
+10 silly install cloneCurrentTreeToIdealTree
+11 silly install loadShrinkwrap
+12 silly install loadAllDepsIntoIdealTree
+13 silly resolveWithNewModule mysql@2.16.0 checking installable status
+14 http fetch GET 200 https://registry.npmjs.org/bignumber.js 29ms
+15 http fetch GET 200 https://registry.npmjs.org/safe-buffer 30ms
+16 silly pacote version manifest for bignumber.js@4.1.0 fetched in 41ms
+17 silly resolveWithNewModule bignumber.js@4.1.0 checking installable status
+18 silly pacote version manifest for safe-buffer@5.1.2 fetched in 40ms
+19 silly resolveWithNewModule safe-buffer@5.1.2 checking installable status
+20 http fetch GET 200 https://registry.npmjs.org/readable-stream 48ms
+21 silly pacote version manifest for readable-stream@2.3.6 fetched in 59ms
+22 silly resolveWithNewModule readable-stream@2.3.6 checking installable status
+23 http fetch GET 200 https://registry.npmjs.org/sqlstring 59ms
+24 silly pacote version manifest for sqlstring@2.3.1 fetched in 71ms
+25 silly resolveWithNewModule sqlstring@2.3.1 checking installable status
+26 http fetch GET 200 https://registry.npmjs.org/inherits 38ms
+27 http fetch GET 200 https://registry.npmjs.org/process-nextick-args 38ms
+28 http fetch GET 200 https://registry.npmjs.org/isarray 40ms
+29 http fetch GET 200 https://registry.npmjs.org/core-util-is 42ms
+30 http fetch GET 200 https://registry.npmjs.org/string_decoder 43ms
+31 http fetch GET 200 https://registry.npmjs.org/util-deprecate 47ms
+32 silly pacote range manifest for inherits@~2.0.3 fetched in 50ms
+33 silly resolveWithNewModule inherits@2.0.3 checking installable status
+34 silly pacote range manifest for process-nextick-args@~2.0.0 fetched in 51ms
+35 silly resolveWithNewModule process-nextick-args@2.0.0 checking installable status
+36 silly pacote range manifest for isarray@~1.0.0 fetched in 52ms
+37 silly resolveWithNewModule isarray@1.0.0 checking installable status
+38 silly pacote range manifest for core-util-is@~1.0.0 fetched in 54ms
+39 silly resolveWithNewModule core-util-is@1.0.2 checking installable status
+40 silly pacote range manifest for string_decoder@~1.1.1 fetched in 53ms
+41 silly resolveWithNewModule string_decoder@1.1.1 checking installable status
+42 silly pacote range manifest for util-deprecate@~1.0.1 fetched in 54ms
+43 silly resolveWithNewModule util-deprecate@1.0.2 checking installable status
+44 silly currentTree !invalid#2
+45 silly idealTree !invalid#1
+45 silly idealTree ├── bignumber.js@4.1.0
+45 silly idealTree ├── core-util-is@1.0.2
+45 silly idealTree ├── inherits@2.0.3
+45 silly idealTree ├── isarray@1.0.0
+45 silly idealTree ├── mysql@2.16.0
+45 silly idealTree ├── process-nextick-args@2.0.0
+45 silly idealTree ├── readable-stream@2.3.6
+45 silly idealTree ├── safe-buffer@5.1.2
+45 silly idealTree ├── sqlstring@2.3.1
+45 silly idealTree ├── string_decoder@1.1.1
+45 silly idealTree └── util-deprecate@1.0.2
+46 silly install generateActionsToTake
+47 warn checkPermissions Missing write access to /
+48 silly saveTree !invalid#1
+48 silly saveTree └─┬ mysql@2.16.0
+48 silly saveTree   ├── bignumber.js@4.1.0
+48 silly saveTree   ├─┬ readable-stream@2.3.6
+48 silly saveTree   │ ├── core-util-is@1.0.2
+48 silly saveTree   │ ├── inherits@2.0.3
+48 silly saveTree   │ ├── isarray@1.0.0
+48 silly saveTree   │ ├── process-nextick-args@2.0.0
+48 silly saveTree   │ ├── safe-buffer@5.1.2
+48 silly saveTree   │ ├── string_decoder@1.1.1
+48 silly saveTree   │ └── util-deprecate@1.0.2
+48 silly saveTree   ├── safe-buffer@5.1.2
+48 silly saveTree   └── sqlstring@2.3.1
+49 warn enoent ENOENT: no such file or directory, open '/package.json'
+50 verbose enoent This is related to npm not being able to find a file.
+51 warn !invalid#1 No description
+52 warn !invalid#1 No repository field.
+53 warn !invalid#1 No README data
+54 warn !invalid#1 No license field.
+55 verbose stack Error: EACCES: permission denied, access '/'
+56 verbose cwd /
+57 verbose Linux 4.13.0-46-generic
+58 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "mysql" "--save"
+59 verbose node v8.11.3
+60 verbose npm  v5.6.0
+61 error path /
+62 error code EACCES
+63 error errno -13
+64 error syscall access
+65 error Error: EACCES: permission denied, access '/'
+65 error  { Error: EACCES: permission denied, access '/'
+65 error   stack: 'Error: EACCES: permission denied, access \'/\'',
+65 error   errno: -13,
+65 error   code: 'EACCES',
+65 error   syscall: 'access',
+65 error   path: '/' }
+66 error Please try running this command again as root/Administrator.
+67 verbose exit [ -13, true ]

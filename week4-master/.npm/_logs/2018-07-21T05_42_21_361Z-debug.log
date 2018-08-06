@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'felixge/node-mysql' ]
+2 info using npm@5.6.0
+3 info using node@v9.11.2
+4 verbose config Skipping project config: /home/doghoney/.npmrc. (matches userconfig)
+5 verbose npm-session 2d812f0fdaf7e9a7
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData error for github:felixge/node-mysql Command failed: /usr/bin/git clone -q git://github.com/felixge/node-mysql.git /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798
+8 silly fetchPackageMetaData /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798/.git: Permission denied
+9 verbose stack Error: Command failed: /usr/bin/git clone -q git://github.com/felixge/node-mysql.git /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798
+9 verbose stack /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798/.git: Permission denied
+9 verbose stack
+9 verbose stack     at ChildProcess.exithandler (child_process.js:273:12)
+9 verbose stack     at ChildProcess.emit (events.js:180:13)
+9 verbose stack     at maybeClose (internal/child_process.js:936:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
+10 verbose cwd /home/doghoney
+11 verbose Linux 4.13.0-46-generic
+12 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "felixge/node-mysql"
+13 verbose node v9.11.2
+14 verbose npm  v5.6.0
+15 error code 1
+16 error Command failed: /usr/bin/git clone -q git://github.com/felixge/node-mysql.git /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798
+16 error /home/doghoney/.npm/_cacache/tmp/git-clone-fb585798/.git: Permission denied
+17 verbose exit [ 1, true ]

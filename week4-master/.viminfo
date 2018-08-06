@@ -1,0 +1,1100 @@
+# 이 viminfo 파일은 빔이 만든 것입니다 Vim 8.0.
+# 조심만 한다면 고칠 수도 있습니다!
+
+# Viminfo version
+|1,4
+
+# 이 파일이 저장되었을 때의 'encoding'의 값
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Last Search Pattern:
+~Msle0~/\<conn\>
+
+# 명령 줄 히스토리 (새것부터 오래된 것 순):
+:q!
+|2,0,1532527492,,"q!"
+:wq
+|2,0,1532527490,,"wq"
+:w
+|2,0,1532517698,,"w"
+:w!
+|2,0,1532517694,,"w!"
+:q
+|2,0,1532447060,,"q"
+:Q
+|2,0,1532444395,,"Q"
+:'<,'>q
+|2,0,1532265172,,"'<,'>q"
+:wq!
+|2,0,1532264764,,"wq!"
+:ㅈㅂ
+|2,0,1532264318,,"ㅈㅂ"
+:W
+|2,0,1532258808,,"W"
+:wd
+|2,0,1532249889,,"wd"
+:WQ
+|2,0,1532195225,,"WQ"
+:i
+|2,0,1532171923,,"i"
+:Wq
+|2,0,1532159229,,"Wq"
+:sudo wq
+|2,0,1532094146,,"sudo wq"
+
+# 찾을 문자열 히스토리 (새것부터 오래된 것 순):
+? \<var\>
+|2,1,1532517571,,"\\<var\\>"
+? \<conn\>
+|2,1,1532448269,,"\\<conn\\>"
+? \<lines\>
+|2,1,1532446955,,"\\<lines\\>"
+? \<sys\>
+|2,1,1532445091,,"\\<sys\\>"
+? \<coding\>
+|2,1,1532445002,,"\\<coding\\>"
+? \<reload\>
+|2,1,1532444956,,"\\<reload\\>"
+? \<trans\>
+|2,1,1532444390,,"\\<trans\\>"
+? \<each_line\>
+|2,1,1532444370,,"\\<each_line\\>"
+? \<back\>
+|2,1,1532444368,,"\\<back\\>"
+? :]
+|2,1,1532444367,,":]"
+? \<decode\>
+|2,1,1532444366,,"\\<decode\\>"
+?//
+|2,1,1532331089,47,"/"
+? \*',
+|2,1,1532109065,,"\\*',"
+
+# 표현 히스토리 (새것부터 오래된 것 순):
+
+# 입력 줄 히스토리 (새것부터 오래된 것 순):
+
+# Debug Line 히스토리 (새것부터 오래된 것 순):
+
+# 레지스터:
+""1	LINE	0
+	}); // app
+	
+	app.listen(4000, function() {
+	  console.log('Example app listening on port 4000!')
+	});
+	*/
+|3,1,1,1,6,0,1532517677,"}); // app","","app.listen(4000, function() {","  console.log('Example app listening on port 4000!')","});","*/"
+"2	LINE	0
+	        response.writeHead(302, {Location: `${path_herf}`});
+	        response.end();
+	      })//query
+	  });
+	}
+	  else{
+	      response.writeHead(404);
+	      response.end('Not founddfdfdf');
+	  }
+|3,0,2,1,9,0,1532517676,"        response.writeHead(302, {Location: `${path_herf}`});","        response.end();","      })//query","  });","}","  else{","      response.writeHead(404);","      response.end('Not founddfdfdf');","  }"
+"3	LINE	0
+	
+	  request.on('end', function (){
+	    var post = qs.parse(body);
+	    var filteredId = post.id;
+	    //user 가 이 게시글을 삭제할 권리가 있는지 체크가 필요하다.
+	    db.query(`DELETE FROM ${tablename} WHERE id=${filteredId}` , function(error , result){
+	        if(error){
+	          throw error;
+	        }
+|3,0,3,1,9,0,1532517674,"","  request.on('end', function (){","    var post = qs.parse(body);","    var filteredId = post.id;","    //user 가 이 게시글을 삭제할 권리가 있는지 체크가 필요하다.","    db.query(`DELETE FROM ${tablename} WHERE id=${filteredId}` , function(error , result){","        if(error){","          throw error;","        }"
+"4	LINE	0
+	  var tablename='cse_issue'
+	  var path_herf='/CSE/issue'
+	  var body = '';
+	  request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스
+	          body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가
+	  });
+|3,0,4,1,6,0,1532517673,"  var tablename='cse_issue'","  var path_herf='/CSE/issue'","  var body = '';","  request.on('data', function (data) { // post 방식으로 웹브라우저를 전송할때 너무 많은 데이터를 전송하면 , 무리데스","          body += data; // 콜백이 실행될때마다 실행됨 정보가 조각조각 들어오다가","  });"
+"5	LINE	0
+	
+	else if(pathname === '/CSE/issue/update_process'){
+	
+	
+	}else if(pathname === '/CSE/issue/delete'){
+|3,0,5,1,5,0,1532517672,"","else if(pathname === '/CSE/issue/update_process'){","","","}else if(pathname === '/CSE/issue/delete'){"
+"6	LINE	0
+	  }else if(pathname === '/CSE/issue/write_process'){
+	
+	  }else if(pathname === '/CSE/issue/view'){
+	
+	}else if(pathname === '/CSE/issue/update'){
+|3,0,6,1,5,0,1532517671,"  }else if(pathname === '/CSE/issue/write_process'){","","  }else if(pathname === '/CSE/issue/view'){","","}else if(pathname === '/CSE/issue/update'){"
+"7	LINE	0
+	
+	
+	  }else if(pathname === '/CSE/issue/write'){
+	    /
+	
+|3,0,7,1,5,0,1532517670,"","","  }else if(pathname === '/CSE/issue/write'){","    /",""
+"8	LINE	0
+	    }
+	  }else if(pathname === '/CSE'){
+	
+	
+	  }else if(pathname === '/CSE/issue'){
+|3,0,8,1,5,0,1532517669,"    }","  }else if(pathname === '/CSE'){","","","  }else if(pathname === '/CSE/issue'){"
+"9	LINE	0
+	
+	  if(pathname === '/'){
+	
+	    }else{
+	
+|3,0,9,1,5,0,1532517668,"","  if(pathname === '/'){","","    }else{",""
+"-	CHAR	0
+	/
+|3,0,36,0,1,0,1532517603,"/"
+
+# 파일 마크:
+'0  1  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,48,1,0,1532527492,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+'1  1  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,49,1,2,1532522439,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+'2  519  0  ~/package-lock.json
+|4,50,519,0,1532517919,"~/package-lock.json"
+'3  55  0  ~/app.js
+|4,51,55,0,1532516302,"~/app.js"
+'4  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,52,72,0,1532515859,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+'5  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,53,72,0,1532515859,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+'6  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,54,72,0,1532515859,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+'7  46  0  ~/app.js
+|4,55,46,0,1532496188,"~/app.js"
+'8  46  0  ~/app.js
+|4,56,46,0,1532496188,"~/app.js"
+'9  27  68  ~/extract.py
+|4,57,27,68,1532452285,"~/extract.py"
+
+# 점프목록 (새것이 먼저):
+-'  1  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,1,0,1532527492,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  1  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,1,2,1532522439,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,72,0,1532518470,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  519  0  ~/package-lock.json
+|4,39,519,0,1532517919,"~/package-lock.json"
+-'  519  0  ~/package-lock.json
+|4,39,519,0,1532517919,"~/package-lock.json"
+-'  1  0  ~/package-lock.json
+|4,39,1,0,1532517860,"~/package-lock.json"
+-'  1  0  ~/package-lock.json
+|4,39,1,0,1532517860,"~/package-lock.json"
+-'  57  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,57,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  62  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,62,4,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  68  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,68,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  69  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,69,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  75  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,75,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  76  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,76,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  78  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,78,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  79  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,79,2,1532517571,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  84  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,84,4,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  85  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,85,4,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  91  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,91,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  92  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,92,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  93  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,93,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  95  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,95,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  100  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,100,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  101  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,101,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  102  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,102,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  103  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,103,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  104  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,104,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  109  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,109,4,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  110  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,110,4,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  131  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,131,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  132  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,132,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  133  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,133,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  134  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,134,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  135  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,135,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  147  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,147,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  148  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,148,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  149  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,149,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  150  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,150,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  151  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,151,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  152  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,152,10,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  160  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,160,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  161  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,161,2,1532517570,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  162  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,162,2,1532517569,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  163  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,163,2,1532517569,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  164  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,164,2,1532517569,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  177  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,177,10,1532517568,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  178  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,178,10,1532517568,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  179  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,179,10,1532517568,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  180  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,180,10,1532517568,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  181  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,181,10,1532517567,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  182  10  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,182,10,1532517567,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  190  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,190,2,1532517567,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  191  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,191,2,1532517566,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  192  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,192,2,1532517566,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  193  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,193,2,1532517566,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  194  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,194,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  199  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,199,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  201  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,201,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  202  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,202,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  203  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,203,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  205  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,205,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  228  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,228,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  229  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,229,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  230  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,230,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  231  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,231,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  232  2  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,232,2,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  238  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,238,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  239  4  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,239,4,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  255  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,255,0,1532517565,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,72,0,1532516942,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  55  0  ~/app.js
+|4,39,55,0,1532516302,"~/app.js"
+-'  55  0  ~/app.js
+|4,39,55,0,1532516302,"~/app.js"
+-'  55  0  ~/app.js
+|4,39,55,0,1532516302,"~/app.js"
+-'  55  0  ~/app.js
+|4,39,55,0,1532516302,"~/app.js"
+-'  55  0  ~/app.js
+|4,39,55,0,1532516302,"~/app.js"
+-'  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,72,0,1532515859,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  72  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,72,0,1532515859,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532515651,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532515651,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532515651,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532515651,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532515651,"~/app.js"
+-'  1  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,1,0,1532515605,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  1  0  /week4/2018_Summer_Mad_Week4/board/bmain.js
+|4,39,1,0,1532515605,"/week4/2018_Summer_Mad_Week4/board/bmain.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  46  0  ~/app.js
+|4,39,46,0,1532496188,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+-'  1  0  ~/app.js
+|4,39,1,0,1532496157,"~/app.js"
+
+# 파일내의 마크 히스토리 (새것부터 오래된 순):
+
+> /week4/2018_Summer_Mad_Week4/board/bmain.js
+	*	1532527490	0
+	"	1	0
+
+> ~/package-lock.json
+	*	1532517919	0
+	"	519	0
+
+> ~/app.js
+	*	1532516299	0
+	"	55	0
+	^	46	0
+	.	186	1
+	+	186	1
+
+> ~/extract.py
+	*	1532452280	0
+	"	27	68
+	^	27	69
+	.	27	68
+	+	34	0
+	+	32	20
+	+	37	11
+	+	38	0
+	+	35	0
+	+	33	88
+	+	34	27
+	+	18	0
+	+	26	120
+	+	19	6
+	+	33	0
+	+	34	27
+	+	28	28
+	+	26	102
+	+	31	2
+	+	38	2
+	+	28	40
+	+	26	103
+	+	19	6
+	+	29	0
+	+	28	0
+	+	21	19
+	+	28	0
+	+	26	120
+	+	31	0
+	+	38	0
+	+	1	31
+	+	1	0
+	+	8	0
+	+	19	6
+	+	26	78
+	+	4	14
+	+	26	130
+	+	31	2
+	+	38	2
+	+	26	57
+	+	26	100
+	+	21	19
+	+	22	0
+	+	26	30
+	+	26	127
+	+	8	0
+	+	7	0
+	+	8	0
+	+	7	0
+	+	8	0
+	+	26	114
+	+	4	0
+	+	8	0
+	+	26	96
+	+	7	0
+	+	8	0
+	+	2	0
+	+	1	20
+	+	26	114
+	+	31	0
+	+	38	0
+	+	29	0
+	+	30	1
+	+	31	2
+	+	38	2
+	+	29	0
+	+	26	132
+	+	17	34
+	+	26	116
+	+	6	12
+	+	17	8
+	+	24	0
+	+	23	0
+	+	22	0
+	+	25	0
+	+	25	8
+	+	7	0
+	+	8	0
+	+	17	31
+	+	7	0
+	+	8	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	25	0
+	+	24	1
+	+	23	3
+	+	25	1
+	+	31	0
+	+	38	0
+	+	26	37
+	+	25	1
+	+	26	8
+	+	26	30
+	+	28	0
+	+	26	0
+	+	17	2
+	+	6	0
+	+	17	25
+	+	26	72
+	+	26	27
+	+	15	0
+	+	1	16
+	+	27	68
+
+> ~/test.py
+	*	1532447222	0
+	"	5	0
+	^	5	0
+	.	5	0
+	+	9	0
+	+	2	30
+	+	6	0
+	+	5	0
+
+> ~/sujeong.txt
+	*	1532446187	0
+	"	21	1
+	^	21	2
+
+> /usr/share/vim/vim80/doc/help.txt
+	*	1532446152	0
+	"	1	0
+
+> /etc/profile
+	*	1532441897	0
+	"	29	17
+	^	29	18
+	.	29	17
+	+	29	17
+
+> /etc/default/locale
+	*	1532441834	0
+	"	3	27
+	^	3	28
+	.	3	27
+	+	3	27
+
+> /etc/environment
+	*	1532441817	0
+	"	3	27
+	^	3	28
+	.	3	27
+	+	3	27
+
+> ~/get-pip.py
+	*	1532440182	0
+	"	1	0
+
+> ~/.vimrc
+	*	1532437014	0
+	"	10	28
+	^	10	29
+	.	10	28
+	+	18	16
+	+	4	12
+	+	6	0
+	+	12	0
+	+	11	14
+	+	12	10
+	+	15	11
+	+	26	46
+	+	8	0
+	+	11	14
+	+	10	28
+
+> /etc/vim/vimrc
+	*	1532436928	0
+	"	39	0
+
+> /etc/mysql/my.cnf
+	*	1532433718	0
+	"	19	23
+	^	19	24
+	.	19	23
+	+	19	23
+
+> /etc/my.cnf
+	*	1532433654	0
+	"	1	0
+
+> /home/workspace/univ.js
+	*	1532431743	0
+	"	4	15
+	^	4	16
+	.	4	15
+	+	2	31
+	+	4	15
+
+> ~/server_side_javascript/app.js
+	*	1532349283	0
+	"	143	2
+	^	33	2
+	.	33	1
+	+	90	18
+	+	100	20
+	+	108	0
+	+	107	2
+	+	120	2
+	+	118	2
+	+	2	25
+	+	5	27
+	+	26	0
+	+	9	9
+	+	23	0
+	+	19	9
+	+	25	0
+	+	26	20
+	+	2	1
+	+	33	0
+	+	122	0
+	+	38	5
+	+	37	2
+	+	38	0
+	+	37	0
+	+	42	0
+	+	41	1
+	+	89	0
+	+	57	52
+	+	47	0
+	+	26	29
+	+	26	25
+	+	34	5
+	+	35	5
+	+	36	0
+	+	26	25
+	+	26	21
+	+	26	18
+	+	32	0
+	+	2	6
+	+	51	3
+	+	7	37
+	+	88	3
+	+	63	2
+	+	64	2
+	+	65	3
+	+	66	3
+	+	67	3
+	+	68	2
+	+	87	14
+	+	30	28
+	+	58	5
+	+	87	22
+	+	71	23
+	+	54	11
+	+	53	26
+	+	56	4
+	+	2	1
+	+	3	1
+	+	4	1
+	+	55	39
+	+	53	45
+	+	30	1
+	+	53	2
+	+	58	2
+	+	87	18
+	+	52	1
+	+	57	1
+	+	59	4
+	+	60	4
+	+	70	4
+	+	32	0
+	+	59	4
+	+	60	4
+	+	70	4
+	+	59	4
+	+	60	4
+	+	59	0
+	+	60	28
+	+	59	28
+	+	60	31
+	+	61	29
+	+	60	3
+	+	59	28
+	+	61	27
+	+	8	39
+	+	27	21
+	+	61	0
+	+	60	2
+	+	27	29
+	+	27	48
+	+	27	18
+	+	58	14
+	+	9	43
+	+	29	54
+	+	6	26
+	+	36	0
+	+	27	0
+	+	158	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	32	0
+	+	33	1
+
+> ~/server_side_javascript/routes/main.js
+	*	1532331918	0
+	"	1	0
+
+> ~/database_mysql.js
+	*	1532267557	0
+	"	33	22
+	^	33	23
+	.	33	22
+	+	7	0
+	+	4	11
+	+	5	16
+	+	12	32
+	+	2	7
+	+	9	3
+	+	12	3
+	+	11	31
+	+	13	0
+	+	19	2
+	+	13	0
+	+	12	41
+	+	19	2
+	+	20	0
+	+	5	18
+	+	4	15
+	+	5	22
+	+	4	11
+	+	5	18
+	+	44	11
+	+	18	2
+	+	10	1
+	+	31	2
+	+	23	97
+	+	29	28
+	+	23	75
+	+	24	52
+	+	25	22
+	+	21	0
+	+	33	64
+	+	35	53
+	+	43	3
+	+	44	0
+	+	33	42
+	+	35	32
+	+	41	18
+	+	33	10
+	+	34	0
+	+	33	35
+	+	36	2
+	+	35	16
+	+	34	0
+	+	33	22
+
+> ~/server_side_javascript/views/signup_identify.jade
+	*	1532267442	0
+	"	4	10
+	^	7	14
+	.	7	13
+	+	14	43
+	+	8	24
+	+	12	20
+	+	14	43
+	+	12	16
+	+	8	44
+	+	10	19
+	+	12	3
+	+	13	3
+	+	12	26
+	+	14	53
+	+	8	18
+	+	7	13
+
+> ~/server_side_javascript/views/identification.jade
+	*	1532263035	0
+	"	6	30
+	^	6	33
+	.	6	30
+	+	5	4
+	+	4	31
+	+	6	30
+
+> ~/server_side_javascript/mailer.js
+	*	1532259120	0
+	"	1	0
+	^	21	4
+	.	21	4
+	+	6	17
+	+	5	16
+	+	17	3
+	+	11	0
+	+	12	1
+	+	13	1
+	+	14	1
+	+	15	0
+	+	16	0
+	+	18	0
+	+	21	4
+	a	1	0
+
+> ~/server_side_javascript/views/signup_classify.jade
+	*	1532258503	0
+	"	8	18
+	^	6	5
+	.	7	0
+	+	10	56
+	+	8	58
+	+	12	66
+	+	6	52
+	+	12	74
+	+	12	86
+	+	12	61
+	+	13	0
+	+	12	75
+	+	8	71
+	+	8	49
+	+	10	52
+	+	12	47
+	+	12	43
+	+	7	0
+
+> ~/server_side_javascript/views/main.jade
+	*	1532252655	0
+	"	18	27
+	^	18	28
+	.	18	27
+	+	7	45
+	+	11	27
+	+	7	30
+	+	17	31
+	+	18	27
+
+> ~/server_side_javascript/views/signup.jade
+	*	1532247559	0
+	"	18	76
+	^	18	77
+	.	18	76
+	+	1	2
+	+	16	54
+	+	13	12
+	+	9	17
+	+	17	15
+	+	7	15
+	+	18	14
+	+	17	23
+	+	18	76
+
+> /works/2018_Summer_Mad_Week4/MadCamp_week4_web_nodejs/omain.js
+	*	1532245392	0
+	"	1	0
+	^	85	0
+	.	44	33
+	+	3	32
+	+	33	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	89	0
+	+	88	2
+	+	26	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	24	0
+	+	23	0
+	+	94	13
+	+	133	51
+	+	140	15
+	+	136	31
+	+	140	63
+	+	136	72
+	+	145	8
+	+	146	6
+	+	4	33
+	+	23	37
+	+	127	4
+	+	118	5
+	+	127	5
+	+	144	82
+	+	160	36
+	+	21	3
+	+	25	0
+	+	26	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	25	56
+	+	147	0
+	+	11	1
+	+	12	0
+	+	11	12
+	+	168	58
+	+	168	3
+	+	165	13
+	+	133	19
+	+	165	134
+	+	165	233
+	+	168	0
+	+	193	0
+	+	191	3
+	+	192	2
+	+	185	130
+	+	177	20
+	+	176	12
+	+	177	16
+	+	176	1
+	+	193	1
+	+	167	0
+	+	96	29
+	+	107	0
+	+	106	0
+	+	109	0
+	+	96	119
+	+	96	85
+	+	106	0
+	+	98	75
+	+	100	32
+	+	105	0
+	+	98	70
+	+	12	20
+	+	98	4
+	+	99	3
+	+	98	4
+	+	99	187
+	+	99	55
+	+	44	33
+
+> /works/2018_Summer_Mad_Week4/MadCamp_week4_web_nodejs/index.js
+	*	1532242331	0
+	"	1	0
+	^	13	67
+	.	13	66
+	+	8	41
+	+	8	82
+	+	8	70
+	+	8	42
+	+	8	53
+	+	9	0
+	+	2	0
+	+	13	21
+	+	7	19
+	+	16	34
+	+	13	62
+	+	18	3
+	+	12	0
+	+	16	0
+	+	13	66
+
+> /works/2018_Summer_Mad_Week4/MadCamp_week4_web_nodejs/syntax/index.js
+	*	1532192434	0
+	"	2	0
+	^	2	0
+	.	1	31
+	+	13	13
+	+	1	31
+
+> /works/2018_Summer_Mad_Week4/MadCamp_week4_web_nodejs/syntax/checkbox_onlyone.html
+	*	1532192107	0
+	"	1	0
+
+> ~/server_side_javascript/views/form.jade
+	*	1532178910	0
+	"	11	3
+	^	11	4
+	.	9	4
+	+	5	4
+	+	4	22
+	+	10	10
+	+	8	20
+	+	12	22
+	+	6	5
+	+	7	2
+	+	8	2
+	+	9	2
+	+	10	2
+	+	11	2
+	+	12	26
+	+	12	24
+	+	6	30
+	+	9	4
+
+> ~/server_side_javascript/views/temp.jade
+	*	1532172613	0
+	"	2	0
+	^	3	8
+	.	3	9
+	+	1	3
+	+	2	0
+	+	4	3
+	+	2	0
+	+	4	5
+	+	5	4
+	+	5	15
+	+	8	12
+	+	7	3
+	+	5	18
+	+	7	2
+	+	6	1
+	+	9	11
+	+	10	0
+	+	4	0
+	+	2	5
+	+	3	9
+
+> ~/server_side_javascript/public/app.js
+	*	1532169786	0
+	"	1	0
+
+> ~/server_side_javascript/public/text.txt
+	*	1532169489	0
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
+
+> ~/myapp/package.json
+	*	1532156131	0
+	"	1	0
+
+> ~/server_side_javascript/webserver.js
+	*	1532155952	0
+	"	1	10
+	^	1	11
+	.	1	10
+	+	11	2
+	+	9	12
+	+	1	10
+
+> /express-mysql/index.js
+	*	1532101754	0
+	"	1	25
+	^	1	26
+	.	1	25
+	+	1	25
+
+> /express-mysql/package.json
+	*	1532101714	0
+	"	8	3
+	^	8	4
+	.	9	0
+	+	7	24
+	+	9	0
+
+> /workspaces/nodejs/server_basic/server_request_get.js
+	*	1532098361	0
+	"	24	0
+	^	24	0
+	.	24	0
+	+	12	0
+	+	9	1
+	+	13	0
+	+	7	1
+	+	16	5
+	+	14	11
+	+	19	4
+	+	18	7
+	+	23	40
+	+	23	37
+	+	23	39
+	+	1	24
+	+	17	54
+	+	23	37
+	+	24	0
+
+> /workspaces/nodejs/server_basic/server.js
+	*	1532096635	0
+	"	10	2
+	^	10	3
+	.	10	2
+	+	10	2
+
+> /etc/passwd
+	*	1532095407	0
+	"	32	0
+
+> /var/www/simpleServer.js
+	*	1532092969	0
+	"	1	0
+	^	11	59
+	.	12	0
+	+	11	59
+	+	12	0
+
+> /var/www/phpinfo.php
+	*	1532092069	0
+	"	5	1
+	^	5	2
+	.	5	1
+	+	1	2
+	+	5	1
+
+> /etc/apache2/apache2.conf
+	*	1532090783	0
+	"	228	34
+	^	228	35
+	.	228	34
+	+	228	34
+
+> /etc/mongodb.conf
+	*	1531134483	0
+	"	11	10
+	^	11	11
+	.	11	10
+	+	11	10

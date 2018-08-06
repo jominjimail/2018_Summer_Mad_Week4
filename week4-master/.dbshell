@@ -1,0 +1,8 @@
+ls -al
+ls
+cat server.js
+clear
+pwd
+cd .. ls
+pwd
+show dbs

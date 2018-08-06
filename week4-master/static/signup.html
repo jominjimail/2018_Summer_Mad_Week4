@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Openmajor Signup</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+	<form action="/signup_process" method="post">
+		<p>
+			<b>1단계: 기본 정보 입력</b>
+		</p>
+		<p>
+			<label>
+				<b>이름</b>
+				<input type="text" id="tbNAME" name="NAME" placeholder="이름", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>아이디</b>
+				<span>
+					<input type="text" id="tbID" name="ID" maxlength="12" placeholder="아이디", required="required">
+				</span>
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>비밀번호</b>
+				<input type="password" id="tbPWD" name="PWD" maxlength="12" placeholder="비밀번호", required="required">
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>전공</b>
+				<select class="selectpicker" name="job">
+		          <option value="">전공선택</option>
+		          <option value="cse">전산</option>
+		          <option value="che">화학</option>
+		          <option value="biotec">생명과학</option>
+		          <option value="elec">전자공학</option>
+		          <option value="mater">신소재공학</option>
+		          <option value="mech">기계공학</option>
+		          <option value="CBE">생화공</option>
+		          <option value="ETC">기타</option>
+        		</select>
+			</label>
+		</p>
+		<p>
+			<label>
+				<b>이메일</b>
+				<input type="text" id="tbEMAIL" name="EMAIL" placeholder="이메일", required="required"> 
+			</label>
+		</p>
+		<p>
+			<button type="submit">이메일 인증</button>
+			<!-- input(type='button', onclick='javascript:history.back()', value='cancel') -->
+			<!-- <input type='button', onclick="location.href=''"> -->
+			<input type='button', onclick="location.href='/'" value="메인으로">
+			<!-- <input type="button" onclick="location.href='/signup'" value="회원가입"> -->
+		</p>
+	</form>
+</body>
+</html>

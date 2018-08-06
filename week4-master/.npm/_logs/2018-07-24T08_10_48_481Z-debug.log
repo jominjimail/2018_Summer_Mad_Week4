@@ -1,0 +1,331 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'request' ]
+2 info using npm@5.6.0
+3 info using node@v9.11.2
+4 verbose npm-session 797cbe38637825b5
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/request 81ms
+8 silly pacote tag manifest for request@latest fetched in 116ms
+9 silly install loadIdealTree
+10 silly install cloneCurrentTreeToIdealTree
+11 silly install loadShrinkwrap
+12 silly install loadAllDepsIntoIdealTree
+13 silly resolveWithNewModule request@2.87.0 checking installable status
+14 http fetch GET 200 https://registry.npmjs.org/form-data 101ms
+15 http fetch GET 200 https://registry.npmjs.org/forever-agent 104ms
+16 http fetch GET 200 https://registry.npmjs.org/http-signature 103ms
+17 http fetch GET 200 https://registry.npmjs.org/is-typedarray 103ms
+18 http fetch GET 200 https://registry.npmjs.org/aws-sign2 108ms
+19 http fetch GET 200 https://registry.npmjs.org/extend 108ms
+20 http fetch GET 200 https://registry.npmjs.org/combined-stream 111ms
+21 http fetch GET 200 https://registry.npmjs.org/har-validator 110ms
+22 http fetch GET 200 https://registry.npmjs.org/aws4 116ms
+23 http fetch GET 200 https://registry.npmjs.org/caseless 117ms
+24 silly pacote range manifest for form-data@~2.3.1 fetched in 124ms
+25 silly resolveWithNewModule form-data@2.3.2 checking installable status
+26 silly pacote range manifest for is-typedarray@~1.0.0 fetched in 125ms
+27 silly resolveWithNewModule is-typedarray@1.0.0 checking installable status
+28 silly pacote range manifest for aws-sign2@~0.7.0 fetched in 131ms
+29 silly resolveWithNewModule aws-sign2@0.7.0 checking installable status
+30 silly pacote range manifest for forever-agent@~0.6.1 fetched in 131ms
+31 silly resolveWithNewModule forever-agent@0.6.1 checking installable status
+32 silly pacote range manifest for http-signature@~1.2.0 fetched in 132ms
+33 silly resolveWithNewModule http-signature@1.2.0 checking installable status
+34 silly pacote range manifest for extend@~3.0.1 fetched in 138ms
+35 silly resolveWithNewModule extend@3.0.2 checking installable status
+36 silly pacote range manifest for combined-stream@~1.0.5 fetched in 139ms
+37 silly resolveWithNewModule combined-stream@1.0.6 checking installable status
+38 silly pacote range manifest for har-validator@~5.0.3 fetched in 140ms
+39 silly resolveWithNewModule har-validator@5.0.3 checking installable status
+40 silly pacote range manifest for aws4@^1.6.0 fetched in 149ms
+41 silly resolveWithNewModule aws4@1.7.0 checking installable status
+42 silly pacote range manifest for caseless@~0.12.0 fetched in 150ms
+43 silly resolveWithNewModule caseless@0.12.0 checking installable status
+44 http fetch GET 200 https://registry.npmjs.org/json-stringify-safe 22ms
+45 silly pacote range manifest for json-stringify-safe@~5.0.1 fetched in 33ms
+46 silly resolveWithNewModule json-stringify-safe@5.0.1 checking installable status
+47 http fetch GET 200 https://registry.npmjs.org/performance-now 39ms
+48 http fetch GET 200 https://registry.npmjs.org/isstream 56ms
+49 http fetch GET 200 https://registry.npmjs.org/qs 42ms
+50 http fetch GET 200 https://registry.npmjs.org/oauth-sign 52ms
+51 http fetch GET 200 https://registry.npmjs.org/mime-types 55ms
+52 http fetch GET 200 https://registry.npmjs.org/uuid 38ms
+53 http fetch GET 200 https://registry.npmjs.org/tunnel-agent 49ms
+54 silly pacote range manifest for performance-now@^2.1.0 fetched in 57ms
+55 silly resolveWithNewModule performance-now@2.1.0 checking installable status
+56 http fetch GET 200 https://registry.npmjs.org/tough-cookie 51ms
+57 silly pacote range manifest for mime-types@~2.1.17 fetched in 73ms
+58 silly resolveWithNewModule mime-types@2.1.19 checking installable status
+59 silly pacote range manifest for isstream@~0.1.2 fetched in 78ms
+60 silly resolveWithNewModule isstream@0.1.2 checking installable status
+61 silly pacote range manifest for qs@~6.5.1 fetched in 63ms
+62 silly resolveWithNewModule qs@6.5.2 checking installable status
+63 silly pacote range manifest for oauth-sign@~0.8.2 fetched in 73ms
+64 silly resolveWithNewModule oauth-sign@0.8.2 checking installable status
+65 silly pacote range manifest for uuid@^3.1.0 fetched in 57ms
+66 silly resolveWithNewModule uuid@3.3.2 checking installable status
+67 silly pacote range manifest for tunnel-agent@^0.6.0 fetched in 65ms
+68 silly resolveWithNewModule tunnel-agent@0.6.0 checking installable status
+69 silly pacote range manifest for tough-cookie@~2.3.3 fetched in 66ms
+70 silly resolveWithNewModule tough-cookie@2.3.4 checking installable status
+71 http fetch GET 200 https://registry.npmjs.org/delayed-stream 22ms
+72 silly pacote range manifest for delayed-stream@~1.0.0 fetched in 26ms
+73 silly resolveWithNewModule delayed-stream@1.0.0 checking installable status
+74 http fetch GET 200 https://registry.npmjs.org/asynckit 28ms
+75 silly pacote range manifest for asynckit@^0.4.0 fetched in 36ms
+76 silly resolveWithNewModule asynckit@0.4.0 checking installable status
+77 http fetch GET 200 https://registry.npmjs.org/mime-db 18ms
+78 silly pacote range manifest for mime-db@~1.35.0 fetched in 22ms
+79 silly resolveWithNewModule mime-db@1.35.0 checking installable status
+80 http fetch GET 200 https://registry.npmjs.org/har-schema 18ms
+81 silly pacote range manifest for har-schema@^2.0.0 fetched in 24ms
+82 silly resolveWithNewModule har-schema@2.0.0 checking installable status
+83 http fetch GET 200 https://registry.npmjs.org/ajv 44ms
+84 silly pacote range manifest for ajv@^5.1.0 fetched in 57ms
+85 silly resolveWithNewModule ajv@5.5.2 checking installable status
+86 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 20ms
+87 silly pacote range manifest for json-schema-traverse@^0.3.0 fetched in 29ms
+88 silly resolveWithNewModule json-schema-traverse@0.3.1 checking installable status
+89 http fetch GET 200 https://registry.npmjs.org/fast-json-stable-stringify 33ms
+90 http fetch GET 200 https://registry.npmjs.org/co 37ms
+91 silly pacote range manifest for fast-json-stable-stringify@^2.0.0 fetched in 45ms
+92 silly resolveWithNewModule fast-json-stable-stringify@2.0.0 checking installable status
+93 silly pacote range manifest for co@^4.6.0 fetched in 49ms
+94 silly resolveWithNewModule co@4.6.0 checking installable status
+95 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 49ms
+96 silly pacote range manifest for fast-deep-equal@^1.0.0 fetched in 53ms
+97 silly resolveWithNewModule fast-deep-equal@1.1.0 checking installable status
+98 http fetch GET 200 https://registry.npmjs.org/jsprim 34ms
+99 http fetch GET 200 https://registry.npmjs.org/assert-plus 37ms
+100 http fetch GET 200 https://registry.npmjs.org/sshpk 38ms
+101 silly pacote range manifest for assert-plus@^1.0.0 fetched in 46ms
+102 silly resolveWithNewModule assert-plus@1.0.0 checking installable status
+103 silly pacote range manifest for jsprim@^1.2.2 fetched in 46ms
+104 silly resolveWithNewModule jsprim@1.4.1 checking installable status
+105 silly pacote range manifest for sshpk@^1.7.0 fetched in 47ms
+106 silly resolveWithNewModule sshpk@1.14.2 checking installable status
+107 http fetch GET 200 https://registry.npmjs.org/json-schema 15ms
+108 silly pacote version manifest for json-schema@0.2.3 fetched in 19ms
+109 silly resolveWithNewModule json-schema@0.2.3 checking installable status
+110 http fetch GET 200 https://registry.npmjs.org/extsprintf 24ms
+111 silly pacote version manifest for extsprintf@1.3.0 fetched in 28ms
+112 silly resolveWithNewModule extsprintf@1.3.0 checking installable status
+113 http fetch GET 200 https://registry.npmjs.org/verror 30ms
+114 silly pacote version manifest for verror@1.10.0 fetched in 33ms
+115 silly resolveWithNewModule verror@1.10.0 checking installable status
+116 http fetch GET 200 https://registry.npmjs.org/tweetnacl 31ms
+117 http fetch GET 200 https://registry.npmjs.org/jsbn 32ms
+118 http fetch GET 200 https://registry.npmjs.org/ecc-jsbn 31ms
+119 http fetch GET 200 https://registry.npmjs.org/dashdash 36ms
+120 http fetch GET 200 https://registry.npmjs.org/bcrypt-pbkdf 36ms
+121 http fetch GET 200 https://registry.npmjs.org/safer-buffer 37ms
+122 http fetch GET 200 https://registry.npmjs.org/asn1 40ms
+123 silly pacote range manifest for tweetnacl@~0.14.0 fetched in 48ms
+124 silly resolveWithNewModule tweetnacl@0.14.5 checking installable status
+125 silly pacote range manifest for dashdash@^1.12.0 fetched in 51ms
+126 silly resolveWithNewModule dashdash@1.14.1 checking installable status
+127 silly pacote range manifest for jsbn@~0.1.0 fetched in 51ms
+128 silly resolveWithNewModule jsbn@0.1.1 checking installable status
+129 silly pacote range manifest for ecc-jsbn@~0.1.1 fetched in 50ms
+130 silly resolveWithNewModule ecc-jsbn@0.1.1 checking installable status
+131 silly pacote range manifest for bcrypt-pbkdf@^1.0.0 fetched in 51ms
+132 silly resolveWithNewModule bcrypt-pbkdf@1.0.2 checking installable status
+133 silly pacote range manifest for safer-buffer@^2.0.2 fetched in 53ms
+134 silly resolveWithNewModule safer-buffer@2.1.2 checking installable status
+135 silly pacote range manifest for asn1@~0.2.3 fetched in 56ms
+136 silly resolveWithNewModule asn1@0.2.3 checking installable status
+137 http fetch GET 200 https://registry.npmjs.org/getpass 57ms
+138 silly pacote range manifest for getpass@^0.1.1 fetched in 59ms
+139 silly resolveWithNewModule getpass@0.1.7 checking installable status
+140 http fetch GET 200 https://registry.npmjs.org/punycode 14ms
+141 silly pacote range manifest for punycode@^1.4.1 fetched in 17ms
+142 silly resolveWithNewModule punycode@1.4.1 checking installable status
+143 silly currentTree workspace@1.0.0
+143 silly currentTree ├── @types/node@10.5.2
+143 silly currentTree ├── boolbase@1.0.0
+143 silly currentTree ├── cheerio@1.0.0-rc.2
+143 silly currentTree ├── core-util-is@1.0.2
+143 silly currentTree ├── css-select@1.2.0
+143 silly currentTree ├── css-what@2.1.0
+143 silly currentTree ├─┬ dom-serializer@0.1.0
+143 silly currentTree │ └── domelementtype@1.1.3
+143 silly currentTree ├── domelementtype@1.3.0
+143 silly currentTree ├── domhandler@2.4.2
+143 silly currentTree ├── domutils@1.5.1
+143 silly currentTree ├── entities@1.1.1
+143 silly currentTree ├── htmlparser2@3.9.2
+143 silly currentTree ├── inherits@2.0.3
+143 silly currentTree ├── isarray@1.0.0
+143 silly currentTree ├── lodash@4.17.10
+143 silly currentTree ├── nth-check@1.0.1
+143 silly currentTree ├── parse5@3.0.3
+143 silly currentTree ├── process-nextick-args@2.0.0
+143 silly currentTree ├── readable-stream@2.3.6
+143 silly currentTree ├── safe-buffer@5.1.2
+143 silly currentTree ├── string_decoder@1.1.1
+143 silly currentTree └── util-deprecate@1.0.2
+144 silly idealTree workspace@1.0.0
+144 silly idealTree ├── @types/node@10.5.2
+144 silly idealTree ├── ajv@5.5.2
+144 silly idealTree ├── asn1@0.2.3
+144 silly idealTree ├── assert-plus@1.0.0
+144 silly idealTree ├── asynckit@0.4.0
+144 silly idealTree ├── aws-sign2@0.7.0
+144 silly idealTree ├── aws4@1.7.0
+144 silly idealTree ├── bcrypt-pbkdf@1.0.2
+144 silly idealTree ├── boolbase@1.0.0
+144 silly idealTree ├── caseless@0.12.0
+144 silly idealTree ├── cheerio@1.0.0-rc.2
+144 silly idealTree ├── co@4.6.0
+144 silly idealTree ├── combined-stream@1.0.6
+144 silly idealTree ├── core-util-is@1.0.2
+144 silly idealTree ├── css-select@1.2.0
+144 silly idealTree ├── css-what@2.1.0
+144 silly idealTree ├── dashdash@1.14.1
+144 silly idealTree ├── delayed-stream@1.0.0
+144 silly idealTree ├─┬ dom-serializer@0.1.0
+144 silly idealTree │ └── domelementtype@1.1.3
+144 silly idealTree ├── domelementtype@1.3.0
+144 silly idealTree ├── domhandler@2.4.2
+144 silly idealTree ├── domutils@1.5.1
+144 silly idealTree ├── ecc-jsbn@0.1.1
+144 silly idealTree ├── entities@1.1.1
+144 silly idealTree ├── extend@3.0.2
+144 silly idealTree ├── extsprintf@1.3.0
+144 silly idealTree ├── fast-deep-equal@1.1.0
+144 silly idealTree ├── fast-json-stable-stringify@2.0.0
+144 silly idealTree ├── forever-agent@0.6.1
+144 silly idealTree ├── form-data@2.3.2
+144 silly idealTree ├── getpass@0.1.7
+144 silly idealTree ├── har-schema@2.0.0
+144 silly idealTree ├── har-validator@5.0.3
+144 silly idealTree ├── htmlparser2@3.9.2
+144 silly idealTree ├── http-signature@1.2.0
+144 silly idealTree ├── inherits@2.0.3
+144 silly idealTree ├── is-typedarray@1.0.0
+144 silly idealTree ├── isarray@1.0.0
+144 silly idealTree ├── isstream@0.1.2
+144 silly idealTree ├── jsbn@0.1.1
+144 silly idealTree ├── json-schema-traverse@0.3.1
+144 silly idealTree ├── json-schema@0.2.3
+144 silly idealTree ├── json-stringify-safe@5.0.1
+144 silly idealTree ├── jsprim@1.4.1
+144 silly idealTree ├── lodash@4.17.10
+144 silly idealTree ├── mime-db@1.35.0
+144 silly idealTree ├── mime-types@2.1.19
+144 silly idealTree ├── nth-check@1.0.1
+144 silly idealTree ├── oauth-sign@0.8.2
+144 silly idealTree ├── parse5@3.0.3
+144 silly idealTree ├── performance-now@2.1.0
+144 silly idealTree ├── process-nextick-args@2.0.0
+144 silly idealTree ├── punycode@1.4.1
+144 silly idealTree ├── qs@6.5.2
+144 silly idealTree ├── readable-stream@2.3.6
+144 silly idealTree ├── request@2.87.0
+144 silly idealTree ├── safe-buffer@5.1.2
+144 silly idealTree ├── safer-buffer@2.1.2
+144 silly idealTree ├── sshpk@1.14.2
+144 silly idealTree ├── string_decoder@1.1.1
+144 silly idealTree ├── tough-cookie@2.3.4
+144 silly idealTree ├── tunnel-agent@0.6.0
+144 silly idealTree ├── tweetnacl@0.14.5
+144 silly idealTree ├── util-deprecate@1.0.2
+144 silly idealTree ├── uuid@3.3.2
+144 silly idealTree └── verror@1.10.0
+145 silly install generateActionsToTake
+146 warn checkPermissions Missing write access to /home/workspace/node_modules
+147 silly saveTree workspace@1.0.0
+147 silly saveTree ├─┬ cheerio@1.0.0-rc.2
+147 silly saveTree │ ├─┬ css-select@1.2.0
+147 silly saveTree │ │ ├── boolbase@1.0.0
+147 silly saveTree │ │ ├── css-what@2.1.0
+147 silly saveTree │ │ ├─┬ domutils@1.5.1
+147 silly saveTree │ │ │ ├─┬ dom-serializer@0.1.0
+147 silly saveTree │ │ │ │ ├── domelementtype@1.1.3
+147 silly saveTree │ │ │ │ └── entities@1.1.1
+147 silly saveTree │ │ │ └── domelementtype@1.3.0
+147 silly saveTree │ │ └── nth-check@1.0.1
+147 silly saveTree │ ├── dom-serializer@0.1.0
+147 silly saveTree │ ├── entities@1.1.1
+147 silly saveTree │ ├─┬ htmlparser2@3.9.2
+147 silly saveTree │ │ ├── domhandler@2.4.2
+147 silly saveTree │ │ ├── inherits@2.0.3
+147 silly saveTree │ │ └─┬ readable-stream@2.3.6
+147 silly saveTree │ │   ├── core-util-is@1.0.2
+147 silly saveTree │ │   ├── isarray@1.0.0
+147 silly saveTree │ │   ├── process-nextick-args@2.0.0
+147 silly saveTree │ │   ├── safe-buffer@5.1.2
+147 silly saveTree │ │   ├── string_decoder@1.1.1
+147 silly saveTree │ │   └── util-deprecate@1.0.2
+147 silly saveTree │ ├── lodash@4.17.10
+147 silly saveTree │ └─┬ parse5@3.0.3
+147 silly saveTree │   └── @types/node@10.5.2
+147 silly saveTree └─┬ request@2.87.0
+147 silly saveTree   ├── aws-sign2@0.7.0
+147 silly saveTree   ├── aws4@1.7.0
+147 silly saveTree   ├── caseless@0.12.0
+147 silly saveTree   ├─┬ combined-stream@1.0.6
+147 silly saveTree   │ └── delayed-stream@1.0.0
+147 silly saveTree   ├── extend@3.0.2
+147 silly saveTree   ├── forever-agent@0.6.1
+147 silly saveTree   ├─┬ form-data@2.3.2
+147 silly saveTree   │ ├── asynckit@0.4.0
+147 silly saveTree   │ └─┬ mime-types@2.1.19
+147 silly saveTree   │   └── mime-db@1.35.0
+147 silly saveTree   ├─┬ har-validator@5.0.3
+147 silly saveTree   │ ├─┬ ajv@5.5.2
+147 silly saveTree   │ │ ├── co@4.6.0
+147 silly saveTree   │ │ ├── fast-deep-equal@1.1.0
+147 silly saveTree   │ │ ├── fast-json-stable-stringify@2.0.0
+147 silly saveTree   │ │ └── json-schema-traverse@0.3.1
+147 silly saveTree   │ └── har-schema@2.0.0
+147 silly saveTree   ├─┬ http-signature@1.2.0
+147 silly saveTree   │ ├── assert-plus@1.0.0
+147 silly saveTree   │ ├─┬ jsprim@1.4.1
+147 silly saveTree   │ │ ├── extsprintf@1.3.0
+147 silly saveTree   │ │ ├── json-schema@0.2.3
+147 silly saveTree   │ │ └── verror@1.10.0
+147 silly saveTree   │ └─┬ sshpk@1.14.2
+147 silly saveTree   │   ├── asn1@0.2.3
+147 silly saveTree   │   ├─┬ bcrypt-pbkdf@1.0.2
+147 silly saveTree   │   │ └── tweetnacl@0.14.5
+147 silly saveTree   │   ├── dashdash@1.14.1
+147 silly saveTree   │   ├─┬ ecc-jsbn@0.1.1
+147 silly saveTree   │   │ └── jsbn@0.1.1
+147 silly saveTree   │   ├── getpass@0.1.7
+147 silly saveTree   │   ├── jsbn@0.1.1
+147 silly saveTree   │   ├── safer-buffer@2.1.2
+147 silly saveTree   │   └── tweetnacl@0.14.5
+147 silly saveTree   ├── is-typedarray@1.0.0
+147 silly saveTree   ├── isstream@0.1.2
+147 silly saveTree   ├── json-stringify-safe@5.0.1
+147 silly saveTree   ├── mime-types@2.1.19
+147 silly saveTree   ├── oauth-sign@0.8.2
+147 silly saveTree   ├── performance-now@2.1.0
+147 silly saveTree   ├── qs@6.5.2
+147 silly saveTree   ├─┬ tough-cookie@2.3.4
+147 silly saveTree   │ └── punycode@1.4.1
+147 silly saveTree   ├── tunnel-agent@0.6.0
+147 silly saveTree   └── uuid@3.3.2
+148 warn workspace@1.0.0 No description
+149 warn workspace@1.0.0 No repository field.
+150 verbose stack Error: EACCES: permission denied, access '/home/workspace/node_modules'
+151 verbose cwd /home/workspace
+152 verbose Linux 4.13.0-46-generic
+153 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "request"
+154 verbose node v9.11.2
+155 verbose npm  v5.6.0
+156 error path /home/workspace/node_modules
+157 error code EACCES
+158 error errno -13
+159 error syscall access
+160 error Error: EACCES: permission denied, access '/home/workspace/node_modules'
+160 error  { Error: EACCES: permission denied, access '/home/workspace/node_modules'
+160 error   stack: 'Error: EACCES: permission denied, access \'/home/workspace/node_modules\'',
+160 error   errno: -13,
+160 error   code: 'EACCES',
+160 error   syscall: 'access',
+160 error   path: '/home/workspace/node_modules' }
+161 error Please try running this command again as root/Administrator.
+162 verbose exit [ -13, true ]

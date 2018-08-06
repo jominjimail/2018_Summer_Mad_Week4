@@ -1,0 +1,111 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'short-id' ]
+2 info using npm@5.6.0
+3 info using node@v9.11.2
+4 verbose npm-session 4425fac31f66dc3f
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/short-id 100ms
+8 silly pacote tag manifest for short-id@latest fetched in 128ms
+9 silly install loadIdealTree
+10 silly install cloneCurrentTreeToIdealTree
+11 silly install loadShrinkwrap
+12 silly install loadAllDepsIntoIdealTree
+13 silly resolveWithNewModule short-id@0.1.0-1 checking installable status
+14 http fetch GET 200 https://registry.npmjs.org/merge-recursive 34ms
+15 silly pacote version manifest for merge-recursive@0.0.3 fetched in 37ms
+16 silly resolveWithNewModule merge-recursive@0.0.3 checking installable status
+17 http fetch GET 200 https://registry.npmjs.org/sechash 898ms
+18 silly pacote range manifest for sechash@~0.2.1 fetched in 908ms
+19 silly resolveWithNewModule sechash@0.2.1 checking installable status
+20 http fetch GET 200 https://registry.npmjs.org/oath 702ms
+21 silly pacote tag manifest for oath@latest fetched in 706ms
+22 silly resolveWithNewModule oath@1.0.0 checking installable status
+23 http fetch GET 200 https://registry.npmjs.org/simple-assert 19ms
+24 silly pacote range manifest for simple-assert@~1.0.0 fetched in 21ms
+25 silly resolveWithNewModule simple-assert@1.0.0 checking installable status
+26 http fetch GET 200 https://registry.npmjs.org/assertion-error 13ms
+27 silly pacote version manifest for assertion-error@1.0.0 fetched in 17ms
+28 silly resolveWithNewModule assertion-error@1.0.0 checking installable status
+29 silly currentTree !invalid#1
+29 silly currentTree ├── bignumber.js@4.1.0
+29 silly currentTree ├── core-util-is@1.0.2
+29 silly currentTree ├── inherits@2.0.3
+29 silly currentTree ├── isarray@1.0.0
+29 silly currentTree ├── mysql@2.16.0
+29 silly currentTree ├── process-nextick-args@2.0.0
+29 silly currentTree ├── readable-stream@2.3.6
+29 silly currentTree ├── safe-buffer@5.1.2
+29 silly currentTree ├── sqlstring@2.3.1
+29 silly currentTree ├── string_decoder@1.1.1
+29 silly currentTree └── util-deprecate@1.0.2
+30 silly idealTree !invalid#1
+30 silly idealTree ├── assertion-error@1.0.0
+30 silly idealTree ├── bignumber.js@4.1.0
+30 silly idealTree ├── core-util-is@1.0.2
+30 silly idealTree ├── inherits@2.0.3
+30 silly idealTree ├── isarray@1.0.0
+30 silly idealTree ├── merge-recursive@0.0.3
+30 silly idealTree ├── mysql@2.16.0
+30 silly idealTree ├── oath@1.0.0
+30 silly idealTree ├── process-nextick-args@2.0.0
+30 silly idealTree ├── readable-stream@2.3.6
+30 silly idealTree ├── safe-buffer@5.1.2
+30 silly idealTree ├── sechash@0.2.1
+30 silly idealTree ├── short-id@0.1.0-1
+30 silly idealTree ├── simple-assert@1.0.0
+30 silly idealTree ├── sqlstring@2.3.1
+30 silly idealTree ├── string_decoder@1.1.1
+30 silly idealTree └── util-deprecate@1.0.2
+31 silly install generateActionsToTake
+32 warn checkPermissions Missing write access to /node_modules
+33 silly saveTree !invalid#1
+33 silly saveTree ├── bignumber.js@4.1.0
+33 silly saveTree ├── core-util-is@1.0.2
+33 silly saveTree ├── inherits@2.0.3
+33 silly saveTree ├── isarray@1.0.0
+33 silly saveTree ├─┬ mysql@2.16.0
+33 silly saveTree │ ├─┬ readable-stream@2.3.6
+33 silly saveTree │ │ ├── process-nextick-args@2.0.0
+33 silly saveTree │ │ ├── safe-buffer@5.1.2
+33 silly saveTree │ │ ├── string_decoder@1.1.1
+33 silly saveTree │ │ └── util-deprecate@1.0.2
+33 silly saveTree │ ├── safe-buffer@5.1.2
+33 silly saveTree │ └── sqlstring@2.3.1
+33 silly saveTree ├── process-nextick-args@2.0.0
+33 silly saveTree ├── readable-stream@2.3.6
+33 silly saveTree ├── safe-buffer@5.1.2
+33 silly saveTree ├─┬ short-id@0.1.0-1
+33 silly saveTree │ ├── merge-recursive@0.0.3
+33 silly saveTree │ └─┬ sechash@0.2.1
+33 silly saveTree │   └─┬ oath@1.0.0
+33 silly saveTree │     └─┬ simple-assert@1.0.0
+33 silly saveTree │       └── assertion-error@1.0.0
+33 silly saveTree ├── sqlstring@2.3.1
+33 silly saveTree ├── string_decoder@1.1.1
+33 silly saveTree └── util-deprecate@1.0.2
+34 warn enoent ENOENT: no such file or directory, open '/package.json'
+35 verbose enoent This is related to npm not being able to find a file.
+36 warn !invalid#1 No description
+37 warn !invalid#1 No repository field.
+38 warn !invalid#1 No README data
+39 warn !invalid#1 No license field.
+40 verbose stack Error: EACCES: permission denied, access '/node_modules'
+41 verbose cwd /
+42 verbose Linux 4.13.0-46-generic
+43 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "short-id"
+44 verbose node v9.11.2
+45 verbose npm  v5.6.0
+46 error path /node_modules
+47 error code EACCES
+48 error errno -13
+49 error syscall access
+50 error Error: EACCES: permission denied, access '/node_modules'
+50 error  { Error: EACCES: permission denied, access '/node_modules'
+50 error   stack: 'Error: EACCES: permission denied, access \'/node_modules\'',
+50 error   errno: -13,
+50 error   code: 'EACCES',
+50 error   syscall: 'access',
+50 error   path: '/node_modules' }
+51 error Please try running this command again as root/Administrator.
+52 verbose exit [ -13, true ]

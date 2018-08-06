@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '--save',
+1 verbose cli   'express',
+1 verbose cli   'ejs',
+1 verbose cli   'express-ejs--layouts',
+1 verbose cli   'mysql' ]
+2 info using npm@5.6.0
+3 info using node@v9.11.2
+4 verbose npm-session 96d2c6f74b87d8c3
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/express 54ms (from cache)
+8 http fetch GET 200 https://registry.npmjs.org/ejs 55ms (from cache)
+9 silly pacote range manifest for express@^4.16.3 fetched in 94ms
+10 silly pacote range manifest for ejs@^2.6.1 fetched in 69ms
+11 http fetch GET 304 https://registry.npmjs.org/mysql 116ms (from cache)
+12 silly pacote tag manifest for mysql@latest fetched in 118ms
+13 warn notice Due to a recent security incident, all user tokens have been invalidated. Please see https://status.npmjs.org/incidents/dn7c1fgrr7ng for more details. To generate a new token, visit https://www.npmjs.com/settings/~/tokens or run "npm login".
+14 http fetch GET 404 https://registry.npmjs.org/express-ejs--layouts 750ms
+15 silly fetchPackageMetaData error for express-ejs--layouts@latest 404 Not Found: express-ejs--layouts@latest
+16 verbose stack Error: 404 Not Found: express-ejs--layouts@latest
+16 verbose stack     at fetch.then.res (/usr/lib/node_modules/npm/node_modules/pacote/lib/fetchers/registry/fetch.js:42:19)
+16 verbose stack     at tryCatcher (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/util.js:16:23)
+16 verbose stack     at Promise._settlePromiseFromHandler (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:512:31)
+16 verbose stack     at Promise._settlePromise (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:569:18)
+16 verbose stack     at Promise._settlePromise0 (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:614:10)
+16 verbose stack     at Promise._settlePromises (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/promise.js:693:18)
+16 verbose stack     at Async._drainQueue (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:133:16)
+16 verbose stack     at Async._drainQueues (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:143:10)
+16 verbose stack     at Immediate.Async.drainQueues [as _onImmediate] (/usr/lib/node_modules/npm/node_modules/bluebird/js/release/async.js:17:14)
+16 verbose stack     at runCallback (timers.js:763:18)
+16 verbose stack     at tryOnImmediate (timers.js:734:5)
+16 verbose stack     at processImmediate (timers.js:716:5)
+17 verbose cwd /home/doghoney/server_side_javascript
+18 verbose Linux 4.13.0-46-generic
+19 verbose argv "/usr/bin/node" "/usr/bin/npm" "i" "--save" "express" "ejs" "express-ejs--layouts" "mysql"
+20 verbose node v9.11.2
+21 verbose npm  v5.6.0
+22 error code E404
+23 error 404 Not Found: express-ejs--layouts@latest
+24 verbose exit [ 1, true ]
