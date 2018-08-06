@@ -1,6 +1,10 @@
-#프로젝트 week4
+## week4
 
-[OpenMajor WEB] 김기수, 조민지
+### node js , mysql ,  MS Azure
+
+### 프로젝트 이름: [OpenMajor WEB] 
+
+### 팀원: 김기수, 조민지
 
 홈페이지 주소:: http://52.231.67.101:3000/
 
